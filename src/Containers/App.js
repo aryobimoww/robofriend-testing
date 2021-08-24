@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import SearchBox from '../Components/SearchBox'
 import CardList from '../Components/CardList'
-import { robots } from '../robots';
+// import { robots } from '../robots';
 import Scroll from '../Components/Scroll';
 import ErrorBoundary from '../Components/ErrorBoundary';
 import './App.css';
