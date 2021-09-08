@@ -10,11 +10,14 @@ import App from './Containers/App';
 import 'tachyons';
 import { searchRobots, requestRobots } from './reducer';
 import * as serviceWorker from './serviceWorker'; 
+import fetch from 'node-fetch';
 
 const logger = createLogger();
 const rootReducer = combineReducers({searchRobots,requestRobots})
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware,logger))
-
+if (!globalThis.fetch) {
+	globalThis.fetch = fetch;
+}
 ReactDOM.render(
 <Provider store={store}>
 <App/>
